@@ -18,17 +18,14 @@ public class Service {
         return price;
     }
 
-    public String addService(Service service) {
-        newService = new ProductDetails(service);
-        System.out.println("Dodano usługę");
-        return newService;
+    public Service addService(Service service) {
+        System.out.println("Dodano usługę do sklepu");
+        return service;
     }
 
-    public buyService() {
+    public finishService(Service service) {
+        Employee employee = new Employee();
 
-    }
-
-    public finishService() {
-
+        if ()
     }
 }

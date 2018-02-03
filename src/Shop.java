@@ -2,17 +2,36 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Shop {
-    private String name;
-    private String address;
+    private static int nextId = 0;
+
+    public static int id;
+    public String name;
+    private Location location;
+
     private List<ProductDetails> products = new LinkedList<>();
-    private String[] type;
+    private List<String> types;
     private List<Service> services = new LinkedList<>();
     private List<Employee> employees = new LinkedList<>();
 
-    public Shop(String name, String address, String[] type) {
+    /*
+    method overloading
+    method overriding
+     */
+
+
+    public Shop(String name, int floor, int box, List<String> types) {
+        this.id = Shop.nextId++;
         this.name = name;
-        this.address = address;
-        this.type = type;
+        this.location = new Location(floor, box);
+        this.types = types;
+        this.products = new LinkedList<ProductDetails>();
+        this.services = new LinkedList<Service>();
+        this.employees = new LinkedList<Employee>();
+    }
+
+
+    public Shop(String name, int floor, int box) {
+        this(name, floor, box, new LinkedList<String>());
     }
 
     public boolean isProductAvailable(Product product, int quantity) {
@@ -34,6 +53,16 @@ public class Shop {
         }
     }
 
+//    public buyService(Service service) {
+//
+//    }
+
+    public void hire(List<Employee> newEmployeesToHire) {
+        for (Employee employee : newEmployeesToHire) {
+            this.hire(employee);
+        }
+    }
+
     public void hire(Employee employee) {
         this.employees.add(employee);
     }
@@ -48,4 +77,13 @@ public class Shop {
         }
         return false;
     }
+
+    public String toString() {
+        return "ID: " + this.id + " , Name: " + this.name + " , Address: " + this.location + " , Type: " + this.types +
+                " Products: " + this.products + " , Services: " + this.services + " , Employees: " + this.employees;
+    }
+
+    // CRUD Product
+    // CRUD Employees
+    // CRUD Services
 }

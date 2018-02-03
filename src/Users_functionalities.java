@@ -1,4 +1,18 @@
-package PACKAGE_NAME;
-
-public class Users_functionalities {
-}
+//public class Users_functionalities {
+//
+//    getallProducts() {
+//
+//    }
+//
+//    getAllServices() {
+//
+//    }
+//
+//    getshopTypes() {
+//
+//    }
+//
+//    getProductTypes() {
+//
+//    }
+//}
