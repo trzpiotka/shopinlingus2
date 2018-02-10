@@ -1,10 +1,13 @@
 public class Service {
+public static int nextId = 0;
 
-    private String name;
+    public int id;
+    public String name;
     private double price;
     private int durationInMinutes;
 
     public Service(String name, double price, int duration) {
+        this.id = Service.nextId++;
         this.name = name;
         this.price = price;
         this.durationInMinutes = duration;
@@ -16,16 +19,5 @@ public class Service {
 
     public double getNettoP(double price) {
         return price;
-    }
-
-    public Service addService(Service service) {
-        System.out.println("Dodano usługę do sklepu");
-        return service;
-    }
-
-    public finishService(Service service) {
-        Employee employee = new Employee();
-
-        if ()
     }
 }
