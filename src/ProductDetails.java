@@ -7,4 +7,8 @@ public class ProductDetails {
         this.product = product;
         this.quantity = quantity;
     }
+
+    public ProductDetails(Product product, int quantity) {
+        this(product, (double) quantity);
+    }
 }

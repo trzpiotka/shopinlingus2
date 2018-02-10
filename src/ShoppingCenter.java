@@ -1,13 +1,18 @@
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ShoppingCenter {
+    public static int nextId = 0;
 
+    public int id;
     private String name;
     public List<Shop> shops;
 
     ShoppingCenter(String name) {
+        this.id = ShoppingCenter.nextId++;
         this.shops = new LinkedList<Shop>();
         this.name = name;
     }
@@ -61,6 +66,55 @@ public class ShoppingCenter {
                 .collect(Collectors.toList());
     }
 
+    public List<Product> getAllProducts() {
+        List<Product> allProducts = new LinkedList<>();
+        for (Shop shop : shops) {
+            for (ProductDetails productDetails : shop.products) {
+                allProducts.add(productDetails.product);
+            }
+        }
+        return allProducts;
+    }
+
+    public List<Service> getAllServices() {
+        List<Service> allServices = new LinkedList<>();
+        for (Shop shop : shops) {
+            allServices.add((Service) shop.services);
+        }
+        return allServices;
+    }
+
+    public List<String> getAllShopTypes() {
+        List<String> allShopTypes = new LinkedList<>();
+        for (Shop shop : shops) {
+            allShopTypes.addAll(shop.types);
+        }
+        return allShopTypes;
+    }
+
+    public Set<String> getAllProductTypes() {
+        return this.getAllProducts().stream()
+                .map(product -> product.type)
+                .collect(Collectors.toSet());
+
+//        Set<String> allProductTypes = new HashSet<>();
+//        for (Shop shop : shops) {
+//            for (ProductDetails productDetails : shop.products) {
+//                allProductTypes.add(productDetails.product.type);
+//            }
+//        }
+//
+//        return allProductTypes;
+//
+//        List<String> result = new LinkedList<>();
+//        shops.stream()
+//                .distinct(type -> shops.??????????)
+//                .collect(Collectors.toList());
+//
+
+//        return this.getAllProducts().stream()
+//                .map(product -> product.type)
+//                .collect(Collectors.toList());
+    }
+
 }
-
-
