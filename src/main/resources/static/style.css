@@ -1,0 +1,72 @@
+html {
+font-family: "Liberation Serif";
+}
+
+body {
+margin: 0px;
+background-color: #e0ecef;
+position:relative;
+min-height: 100%
+}
+
+header {
+padding: 20px;
+
+background-color: grey;
+opacity:0.9;
+background-image: url("https://blog.jakpat.net/wp-content/uploads/2015/04/header-grocery-624x245.png");
+background-position: center top;
+background-attachment: fixed;
+
+font-size: 40px;
+font-family: 'Bowlby One SC';
+color: #e10000;
+text-align: center;
+letter-spacing: 4px;
+}
+
+main {
+display: flex;
+}
+
+.filters {
+padding: 5px;
+}
+
+.results-body {
+padding: 25px 25px 10px 50px;
+color: #008284;
+}
+
+aside {
+background-color: #0dafae;
+padding: 10px;
+}
+
+.filterProduct,
+.filterShopName,
+.filter-shop-type,
+.filterPriceRange {
+opacity: 0.7;
+}
+
+footer {
+background-color: #094b4b;
+color: white;
+text-align: center;
+position: relative;
+margin-top: 1em;
+height: 40px;
+}
+
+.shop-container {
+text-align: left;
+width: 150%;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: #555;
+  border-radius: 200%;
+}
