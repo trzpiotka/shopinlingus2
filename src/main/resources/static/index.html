@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopilingus</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+  <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+</head>
+<body>
+<header>
+  <div class="main-text">Shopilingus</div>
+  <img src="https://lipstickdigitalmarketing.com.au/wp-content/uploads/Logo-Designs.png" width="100px", heigth="100px" class="image"></img>
+</header>
+<main>
+  <aside>
+    <div class="filters">
+      <div class="filterProduct">
+        <p>Filter by <b>products</b>:</p>
+        <input type="text" id="productFilter" style="width: 200px;" placeholder="Type product name here">
+      </div>
+      <div class="filterShopName">
+        <p>Filter by <b>Shop Name</b>:</p>
+        <select class="shop-select" style="width: 200px;"></select>
+      </div>
+      <form class="filter-shop-type">
+        <p>Filter by <b>Shop Type</b>:</p>
+        <div class="filterShopType">
+        </div>
+      </form>
+      <div class="filterPriceRange">
+        <p>Filter by <b>Price Range</b>:</p>
+        <input type="text" class="range-min" style="width: 100px;" placeholder="Min"><input type="text" class="range-max" style="width: 100px;" placeholder="Max">
+      </div>
+      <br>
+      <div class="filter-button"><button type="button"><b>Filtruj</b></div>
+    </div>
+  </aside>
+  <section>
+    <div class="results-body">
+    <div class="search-results"></div>
+    <div class="product-container"></div>
+    </div>
+  </section>
+</main>
+<footer>© Codilingus 2017-<span class="current-year"></span></footer>
+</body>
+</html>
